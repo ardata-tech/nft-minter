@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+:root {
+  --blue : #0170fe;
+  --shadow : rgb(20 21 26/10%) 0px 0px 1px,rgb(71 77 87/8%) 0px 7px 14px,rgb(20 21 26/8%) 0px 3px 6px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* CSS for Navbar */
+
+.navbar-wrapper{
+  background-color: #f2f5f7;
+  box-shadow: var(--shadow);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  height: 70px;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar h1 {
+  margin-top: 0.7rem;
+/*  margin-left: 37vw;*/
+  color: black;
+  letter-spacing: 0.3px;
+}
+
+.connect-card { 
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  border-radius: 15px !important;
+}
+
+.connect-card img{
+  width: 50px;
+  height: 50px;
+}
+
+.connect-card h2{
+  margin-top: 1rem;
+}
+
+.connect-card:hover {
+  background-color: #f2f5f7;
+  cursor: pointer;
+}
+
+.connected-card{
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.connected-card p  {
+  margin-top: 0.8rem;
+  font-weight: 600;
+}
+
+.connected-card img {
+  height: 30px;
+  width: 30px;
+}
+
+/* CSS for HOME */
+
+.home-wrapper {
+  background-color: white;
+}
+
+.home-card {
+  box-shadow: var(--shadow);
+  width: 90vw;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f2f5f7;
+}
+
+.home-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.creation-form{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;  
+}
+
+.creation-form div{
+  margin-top: 1.5rem;
+}
+
+.creation-form div label{
+  color : rgba(0,0,0,0.7);
+  font-weight: 600;
+}
+
+/* Layout CSS */
+
+.container {
+  width: 90vw;
+  margin-left: 5vw;
+}
+
+/* ANTD Overrides */
+
+.ant-btn{
+  font-weight: 600 !important;
+  text-transform: capitalize !important;
+  border-radius: 15px !important;
+  padding: 0rem 2rem !important;
+}
+
+.ant-modal-content{
+ border-radius: 15px !important;
+}
+
+.ant-modal-header{
+  border-radius: 15px !important;
+}
+
+@media only screen and (min-width : 2000px) {
+  .container {
+    width: 60vw;
+    margin-left: 20vw;
+  }
+  .navbar h1 {
+    margin-left: 25vw;
+  }
+}
+
+@media only screen and (max-width : 1200px){
+  .navbar{
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar h1{
+    margin-left: 0;
+    text-align : center;
+  }
+  .connected-card{
+    margin-top: 1rem;
+    padding: 0.5rem;
+    width: 70vw;
+  }
+  .home-wrapper{
+    min-height: 100vh;
+  }
+}
+
+@media only screen and (max-width : 600px){
+  .home-card {
+    margin-top: 6rem;
+  }
+  .navbar .ant-btn-primary {
+    margin-top: 2rem;
+  }
+  .table {
+    overflow: scroll;
+    width: 100vw;
+  }
+  .ant-tabs .ant-tabs-top{
+    overflow: scroll !important;
+  }
+}
+
+/* CSS for table */
+
+table {
+  width: 100%;
+  overflow: scroll;
+}
+
+table tr {
+  border : 1px solid rgba(0,0,0,0.1);
+  border-radius: 15px;
+}
+
+table thead td {
+  padding: 1.5rem 1rem;
+}
+
+table td{
+  padding: 1rem 1rem;
+}
+
+tr {
+ margin-top: 1rem;
+}
+
